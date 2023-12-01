@@ -1,19 +1,21 @@
-
-
+// eslint-disable-next-line no-unused-vars
+import React from "react";
 export default function Card(props) {
-   console.log(props)
+   //  console.log(props)
    return (
       <div>
-            {
-            <><button onClick={onclose}>X</button>
-            <h2>id: {this.props.id}</h2>
-            <h2>Name: {this.props.name}</h2>
-            <h2>Status: {this.props.status}</h2>
-            <h2>Species: {this.props.species}</h2>
-            <h2>Género: {this.props.gender}</h2>
-            <h2>Origen: {this.props.origin}</h2>
-            <img src={this.props.image} alt={this.props.name} /></>
-         }
+         <div className="header">
+            {<>
+               <button onClick={props.onClose}>X</button>
+               <h2>id: {props.id}</h2>
+               <h4>Name: {props.name}</h4>
+               <h4>Status: {props.status}</h4>
+               <h4>Species: {props.species}</h4>
+               <h4>Género: {props.gender}</h4>
+               <h4>Origen: {props.origin.name}</h4>
+               <img src={props.image} alt={props.name} />
+               </>}
+         </div>
       </div>
    );
 }
