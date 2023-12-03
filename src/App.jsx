@@ -8,7 +8,7 @@ function App() {
                <SearchBar onSearch = {
                   (characterID) => window.alert(characterID) }
                />
-               <Cards characters={ characters }/>
+               <Cards className="cardsContainer" characters={ characters }/>
                {/* <Card id = { Rick.id }
                name = { Rick.name }
                status = { Rick.status }
